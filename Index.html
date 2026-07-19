@@ -2,91 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Plástico Chirri - Inicio</title>
 </head>
 <body>
 
     <!-- MENÚ DE NAVEGACIÓN -->
-    <table width="100%" cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #ccc;">
-        <tr>
-          
-            <td align="left" valign="middle" style="width: 250px;">
-                <a href="Index.html">
-                    <img src="Recursos/Local y Logo/Logo.png" alt="Centro Plástico Chirripó" style="height: 50px; width: auto; display: block;">
-                </a>
-            </td>
-            <!-- Enlaces de navegación a la derecha -->
-            <td align="right" valign="middle">
-                <a href="Index.html">Inicio</a> |
-                <a href="Paginas/Catálogo.html">Catálogo</a> |
-                <a href="Paginas/Sobre_Nosotros.html">Nosotros</a> |
-                <a href="Paginas/Localización.html">Ubicación</a> |
-                <a href="Paginas/Contacto.html">Consultas</a> |
-                <a href="Paginas/Sostenibilidad_Cuidado_Ambiental.html">Gestión Ambiental</a>
-            </td>
-        </tr>
-    </table>
+    <nav>
+        <a href="Index.html">Inicio</a> |
+        <a href="Paginas/Catálogo.html">Catálogo</a> |
+        <a href="Paginas/Sobre_Nosotros.html">Nosotros</a> |
+        <a href="Paginas/Localización.html">Ubicación</a> |
+        <a href="Paginas/Contacto.html">Consultas</a> |
+        <a href="Paginas/Sostenibilidad_Cuidado_Ambiental.html">Gestión Ambiental</a>
+    </nav>
 
-    <br><br>
+    <hr>
 
     <!-- SECCIÓN DE BIENVENIDA -->
-    <div style="background-color: #f0f8ff; padding: 40px; border-radius: 8px;">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-                <!-- COLUMNA DEL LOGO (IZQUIERDA) -->
-                <td width="40%" align="center" valign="middle">
-                    <img src="Recursos/Local y Logo/inicio.jpeg" alt="Centro Plástico" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #ddd; display: block;">
-                </td>
-                
-                <!-- COLUMNA DE TEXTOS (DERECHA) -->
-                <td width="60%" align="left" valign="middle" style="padding-left: 40px;">
-                    <p style="font-size: 1.2em; color: #555; margin: 0 0 10px 0;">Bienvenido a</p>
-                    <h1 style="font-size: 3.5em; margin: 0 0 15px 0; line-height: 1.1;">Centro Plástico</h1>
-                    <p style="font-size: 1.5em; color: #666; margin: 0 0 25px 0;">Somos tu mejor opción en productos plásticos de calidad.</p>
-                    <a href="Paginas/Catálogo.html" style="background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1em; display: inline-block;">Conoce más</a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <br><br><br>
+    <section>
+        <img src="Recursos/Local y Logo/inicio.jpg" alt="Centro Plástico">
+        <p>Bienvenido a</p>
+        <h1>Centro Plástico</h1>
+        <p>Somos tu mejor opción en productos plásticos de calidad.</p>
+        <p><a href="Paginas/Catálogo.html">Conoce más</a></p>
+    </section>
+
+    <hr>
 
     <!-- SECCIÓN DE ACCESOS RÁPIDOS -->
-    <h3 style="text-align: center; font-size: 1.8em;">Nuestros Servicios y Secciones</h3>
-    <br>
+    <h2>Nuestros Servicios y Secciones</h2>
     
-    <table width="100%" cellpadding="15" cellspacing="10" border="0">
-        <tr>
-            <td width="25%" align="center" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa; padding: 20px;">
-                <span style="font-size: 2.5em; color: #007bff; font-weight: bold;">?</span>
-                <h3 style="margin: 10px 0;"><a href="Paginas/Catálogo.html" style="text-decoration: none; color: black;">Catálogo</a></h3>
-                <p style="color: #666; font-size: 0.9em;">Explora nuestra variedad de productos.</p>
-            </td>
+    <ul>
+        <li>
+            <h3><a href="Paginas/Catálogo.html">Catálogo</a></h3>
+            <p>Explora nuestra variedad de productos.</p>
+        </li>
+        <li>
+            <h3><a href="Paginas/Localización.html">Ubicación</a></h3>
+            <p>Encuéntranos fácilmente en el mapa.</p>
+        </li>
+        <li>
+            <h3><a href="Paginas/Contacto.html">Consultas</a></h3>
+            <p>Estamos para ayudarte con tus dudas.</p>
+        </li>
+        <li>
+            <h3><a href="Paginas/Sobre_Nosotros.html">Nosotros</a></h3>
+            <p>Información sobre quién somos.</p>
+        </li>
+    </ul>
 
-            <td width="25%" align="center" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa; padding: 20px;">
-                <span style="font-size: 2.5em; color: #28a745; font-weight: bold;">i</span>
-                <h3 style="margin: 10px 0;"><a href="Paginas/Localización.html" style="text-decoration: none; color: black;">Ubicación</a></h3>
-                <p style="color: #666; font-size: 0.9em;">Encuéntranos fácilmente en el mapa.</p>
-            </td>
-
-            <td width="25%" align="center" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa; padding: 20px;">
-                <span style="font-size: 2.5em; color: #ffc107; font-weight: bold;">?</span>
-                <h3 style="margin: 10px 0;"><a href="Paginas/Contacto.html" style="text-decoration: none; color: black;">Consultas</a></h3>
-                <p style="color: #666; font-size: 0.9em;">Estamos para ayudarte con tus dudas.</p>
-            </td>
-
-            <td width="25%" align="center" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa; padding: 20px;">
-                <span style="font-size: 2.5em; color: #6f42c1; font-weight: bold;">i</span>
-                <h3 style="margin: 10px 0;"><a href="Paginas/Sobre_Nosotros.html" style="text-decoration: none; color: black;">Nosotros</a></h3>
-                <p style="color: #666; font-size: 0.9em;">Información sobre quién somos.</p>
-            </td>
-        </tr>
-    </table>
-
-    <br><br><br>
+    <hr>
 
     <!-- PIE DE PÁGINA -->
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid #ccc; background-color: #333; color: white;">
+    <footer>
         <p>© 2026 CENTRO PLÁSTICO CHIRRI. Todos los derechos reservados.</p>
     </footer>
 

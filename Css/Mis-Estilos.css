@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+/*     Apartado para darle formato a los componentes generales de la Página  */
+                             /* Mobile - First */
+    /* Paleta de colores, margenes, paddings y formato de texto */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #FBF7EE;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 , h3 {
+    color: #12512F;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+h2{
+    color: #12512F;
+    font-size: 1.7rem;
+    text-shadow: 4px 4px 4px rgba(108, 128, 100, 0.438);
+}
+
+h4 , p{
+    color: #0c0f0e;
+}
+
+.container{
+   /* Ayuda a que despues de 1400px el contenido del container no se quede anclado a la izquierda sino que este se corre al medio */
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+
+/* Añadimos un diseño de colochos Sarchiseños al hr como metodo decorativo */
+
+hr{
+    width: 100%;
+    height: 14px;                     /* Define el alto de tu imagen/separador */
+    background-image: url('../Recursos/Local_y_Logo/Colochos-Sarchiseños.jpg');
+    background-repeat: repeat-x;      /* Repite la imagen horizontalmente */
+    background-position: center center;      /* Centra la imagen */
+    background-size: contain;
+    margin: 13px 0;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px rgb(17, 18, 20);
+}
+
+
+/* ****************************************** */
+/* ------------------------------------------ */
+        /* Header y Menú de Navegación */
+/* ------------------------------------------ */
+/* ****************************************** */
+
+#navegacion{
+    width: 100vw;
+}
+
+#navegacion .container{
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;        /* Los pone lado a lado en fila */
+    align-items: center;        /* Centra verticalmente el menú con el logo */
+    /* justify-content:space-between; El logo va a la izquierda y los botones a la derecha */
+    max-width:790px;          /* Opcional: para que no se pegue totalmente a las esquinas */
+    margin: 5px auto;             /* Centra el contenedor en pantallas grandes */
+}
+
+#navegacion p{
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.8rem;
+    color: #031f0f;
+}
+
+.container-nav{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#navegacion nav{
+    width: calc(100% - 40px);
+    height: auto;
+    display: flex;
+    gap: 5px; /* Espacio entre cada botón del menú */
+    align-items: center;
+}
+
+#navegacion .nav-item{
+    width: auto;
+    display: flex;
+    flex-direction: row;    /* Este truco pone el icono ARRIBA y el texto ABAJO */
+    align-items: center;    /* Centra horizontalmente icono y texto */
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background-color:#a6dfc044;
+    color: #12512F;         
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 8px 0;
+    padding: 7px 10px;
+    border: 2px solid rgb(7, 83, 7);
+    border-radius: 10px;
+    box-shadow: 3px 4px 2px rgb(17, 18, 20);
+}
+
+#navegacion .nav-icon{
+    display: flex;
+    width: 20px;   
+    height: 20px;
+    margin-bottom: 4px; /* Pequeña separación entre el icono y el texto */
+}
+
+#navegacion .nav-item:hover{
+    background-color:#1aa059;
+    color: #fcfffe; /* Cambia de color al pasar el cursor */
+    transform: translateY(3px); /* Efecto de elevación sutil */
+}
+
+#navegacion .imagen-header{
+    width: 100px;               /* Tamaño del logo */
+    height: 100px;               /* Mantiene la proporción */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#navegacion .imagen-header img{
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    box-shadow: 2px 2px 5px #a59570;
+    margin-right: 3px;
+}
+
+
+/* Esto nos ayuda a que cambie de color solo el <a> que se esta utilizando en el  momento */
+#navegacion .nav-item.active{
+    background-color: #0b6334;
+    color: #f6faf8c5;
+}

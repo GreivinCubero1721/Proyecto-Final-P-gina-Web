@@ -871,12 +871,15 @@ hr{
 
 .contenido--sostenibilidad .video__intro{
     margin-bottom: 18px;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
+    text-align: center;
     color: rgba(12, 15, 14, 0.68);
+    
 }
 
 .contenido--sostenibilidad .video{
     max-width: 760px;
+    margin: auto ;
     background-color: #FFFFFF;
     border: 3px solid rgb(17, 18, 20);
     border-radius: 16px;
@@ -891,6 +894,7 @@ hr{
     aspect-ratio: 16 / 9;
     border: none;
     display: block;
+    
 }
 
 .contenido--sostenibilidad .video__pie{

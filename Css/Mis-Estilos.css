@@ -662,3 +662,302 @@ hr{
 /* ========================================================================= */
 /* ========================================================================= */
 
+/* ========================================================================= */
+/* ========================================================================= */
+/*                      INICIA CSS DE SOSTENIBILIDAD                         */
+/*                             Mobile - First                                */
+/*  Reutiliza .contenido, .titulo y .antetitulo del bloque de Ubicación y    */
+/*  agrega solo lo propio de esta página bajo .contenido--sostenibilidad     */
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+/* ------------------------------------------ */
+        /* Presentación: lema + ilustración */
+/* ------------------------------------------ */
+
+/* Flex con wrap: en móvil se apilan y cuando la pantalla lo permite
+   el lema y la ilustración se acomodan en una sola línea */
+.contenido--sostenibilidad .intro-bloque{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contenido--sostenibilidad .lema{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    background-color: #12512F;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 26px 22px;
+}
+
+.contenido--sostenibilidad .lema__texto{
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #FBF7EE;
+}
+
+.contenido--sostenibilidad .lema__firma{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(252, 223, 185);
+}
+
+.contenido--sostenibilidad .ilustracion{
+    flex: 1 1 100%;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
+}
+
+.contenido--sostenibilidad .ilustracion img{
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    background-color: #a6dfc044;
+}
+
+.contenido--sostenibilidad .ilustracion__pie{
+    padding: 12px 14px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #12512F;
+    border-top: 3px solid rgb(17, 18, 20);
+}
+
+
+/* ------------------------------------------ */
+        /* Párrafo destacado */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .destacado{
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-left: 12px solid #117741;   /* Barra verde a la izquierda */
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 22px 20px;
+}
+
+.contenido--sostenibilidad .destacado p{
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: #0c0f0e;
+}
+
+
+/* ------------------------------------------ */
+        /* Las tres preguntas */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .preguntas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    counter-reset: pregunta;   /* Numera las tarjetas 01, 02, 03 */
+}
+
+.contenido--sostenibilidad .pregunta{
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 22px 20px;
+}
+
+/* Se ajusta el h3 porque el CSS general lo centra con flex */
+.contenido--sostenibilidad .pregunta__titulo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: #12512F;
+    margin-bottom: 14px;
+}
+
+/* La pastilla verde con el número */
+.contenido--sostenibilidad .pregunta__titulo::before{
+    counter-increment: pregunta;
+    content: "0" counter(pregunta);
+    flex: 0 0 auto;
+    padding: 5px 11px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: #FBF7EE;
+    background-color: #117741;
+    border: 2px solid rgb(17, 18, 20);
+    border-radius: 999px;
+}
+
+.contenido--sostenibilidad .pregunta__texto{
+    line-height: 1.6;
+    color: #0c0f0e;
+}
+
+
+/* ------------------------------------------ */
+        /* Lista de materiales reciclables */
+/* ------------------------------------------ */
+
+/* Flex con wrap: una tarjeta por línea en móvil y varias por
+   línea apenas la pantalla tenga espacio suficiente */
+.contenido--sostenibilidad .materiales{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contenido--sostenibilidad .material{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 16px;
+    background-color: #a6dfc044;
+    border: 2px solid #12512F;
+    border-radius: 12px;
+}
+
+.contenido--sostenibilidad .material__tipo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.85rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #12512F;
+}
+
+.contenido--sostenibilidad .material__detalle{
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(12, 15, 14, 0.78);
+}
+
+/* Los residuos especiales llevan aviso porque no van al contenedor común */
+.contenido--sostenibilidad .material--aviso{
+    background-color: #FBF7EE;
+    border-color: #B8332B;
+}
+
+.contenido--sostenibilidad .material--aviso .material__tipo{
+    color: #B8332B;
+}
+
+
+/* ------------------------------------------ */
+        /* Video */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .video__intro{
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    color: rgba(12, 15, 14, 0.68);
+}
+
+.contenido--sostenibilidad .video{
+    max-width: 760px;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
+}
+
+/* El video se adapta al ancho manteniendo la proporción 16:9 */
+.contenido--sostenibilidad .video__marco{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+.contenido--sostenibilidad .video__pie{
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: rgba(12, 15, 14, 0.68);
+    border-top: 3px solid rgb(17, 18, 20);
+}
+
+
+/* ------------------------------------------ */
+        /* De aquí para arriba crece el diseño */
+/* ------------------------------------------ */
+
+/* A partir de 640px los materiales caben de dos en dos */
+@media screen and (min-width: 640px){
+
+    .contenido--sostenibilidad .lema__texto{
+        font-size: 1.45rem;
+    }
+
+    .contenido--sostenibilidad .pregunta{
+        padding: 26px 24px;
+    }
+
+    .contenido--sostenibilidad .pregunta__titulo{
+        font-size: 1.35rem;
+    }
+
+    .contenido--sostenibilidad .material{
+        flex: 1 1 280px;
+    }
+}
+
+/* A partir de 900px el lema y la ilustración entran en una sola fila */
+@media screen and (min-width: 900px){
+
+    .contenido--sostenibilidad .intro-bloque{
+        gap: 32px;
+    }
+
+    .contenido--sostenibilidad .lema{
+        flex: 1 1 320px;
+    }
+
+    .contenido--sostenibilidad .ilustracion{
+        flex: 1 1 380px;
+    }
+
+    .contenido--sostenibilidad .preguntas{
+        gap: 24px;
+    }
+
+    .contenido--sostenibilidad .destacado{
+        padding: 28px 30px;
+    }
+
+    .contenido--sostenibilidad .destacado p{
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ========================================================================= */
+/* ========================================================================= */
+/*                     FINALIZA CSS DE SOSTENIBILIDAD                        */
+/* ========================================================================= */
+/* ========================================================================= */
+
+

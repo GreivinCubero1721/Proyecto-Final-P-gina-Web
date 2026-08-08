@@ -276,3 +276,86 @@ hr{
 /* ************************************** */
 /* -------------------------------------- */
 /* ************************************** */
+
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/*   Apartado para darle formato a los componentes dentro de las demás Páginas  */
+                             /* Mobile - First */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+/*   Apartado para darle formato a los componentes en la verión de escritorio  */
+                             /* Desktop */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+
+@media(min-width:1200px)
+{
+
+/* --------------------------------------------------- */
+        /* Versión Desktop Header y menú de navegación */
+/* --------------------------------------------------- */
+
+
+
+   #navegacion .container{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 160px;
+   }
+
+   .imagen-header{
+    margin-left: -150px;
+   }
+
+   .container-nav{
+    margin-right: -280px ;
+   }
+
+
+/* ---------------------------------------- */
+        /* Versión Desktop al pie de página */
+/* ---------------------------------------- */
+   #pie-pagina .container{
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 60px;
+   }
+
+   #pie-pagina .lista{
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+   }
+
+    #pie-pagina .lista p {
+        /* Evita que el texto rompa líneas (En #pie-pagina p o #pie-pagina .lista p): */
+        /* Esto obliga al texto a mantenerse estrictamente en una sola línea continua, sin importar los espacios que tenga. */
+        white-space: nowrap;
+    }
+
+
+/* ---------------------------------------------------------- */
+        /* Versión Desktop de las demás Páginas del Proyecto */
+/* -------------------------------------------------------- */
+
+
+
+}
+

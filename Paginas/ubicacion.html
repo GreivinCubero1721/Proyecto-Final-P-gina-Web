@@ -45,56 +45,99 @@
     </header>
     <hr>
 
-    <main>
+    <main class="contenido">
 
-    <section>
-    <h2>¿Dónde puede encontrarnos?</h2>
+    <!-- ---------- Dirección + mapa ---------- -->
+    <section class="seccion seccion--mapa" aria-labelledby="titulo-donde">
+      <p class="antetitulo">Sarchí Norte, Valverde Vega &middot; Alajuela</p>
+      <h1 class="titulo" id="titulo-donde">¿Dónde puede encontrarnos?</h1>
 
-    <h3>Dirección</h3>
-    <p>100 mts norte del templo católico de Sarchí.</p>
+      <div class="mapa-bloque">
 
-    <p>
-    <a href="https://maps.app.goo.gl/7CWVMSWedYG525Pc7" target="_blank" rel="noopener">
-    <img src="../Recursos/Local_y_Logo/mapa-preview.png" alt="Ver ubicación en Google Maps" width="248">
-    </a>
-    </p>
+        <div class="datos">
+          <h2 class="datos__rotulo">Dirección</h2>
+          <p class="datos__direccion">100 mts norte del templo católico de Sarchí.</p>
 
-    <p><a href="https://maps.app.goo.gl/7CWVMSWedYG525Pc7" target="_blank" rel="noopener">Abrir en Maps</a></p>
+          <h2 class="datos__rotulo">Cómo llegar</h2>
+          <p class="datos__nota">
+            Estamos en la esquina, en el edificio de madera color naranja, al lado
+            de la Carnicería La Sarchiseña y frente a Boutique Americana.
+          </p>
+
+          <a class="boton" href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21.4s7-6.3 7-11.1a7 7 0 1 0-14 0c0 4.8 7 11.1 7 11.1z"/>
+              <circle cx="12" cy="10.3" r="2.6"/>
+            </svg>
+            Abrir en Google Maps
+          </a>
+        </div>
+
+        <figure class="mapa">
+          <iframe
+            class="mapa__marco"
+            src="https://www.google.com/maps?q=10.0906558,-84.3463215&amp;hl=es&amp;z=18&amp;output=embed"
+            title="Mapa con la ubicación del Centro Plástico Chirri en Sarchí"
+            width="600" height="420"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <figcaption class="mapa__pie">Centro Plástico Chirri &middot; Sarchí, Alajuela</figcaption>
+        </figure>
+
+      </div>
     </section>
 
     <hr>
-    <section>
-    <h3>Conoce nuestras instalaciones</h3>
 
-    <p>
-    <a href="https://maps.app.goo.gl/7CWVMSWedYG525Pc7" target="_blank" rel="noopener">
-    <img src="../Recursos/Local_y_Logo/fachada-1.png" alt="Fachada del Centro Plástico Chirri" width="248">
-    </a>
-    </p>
+    <!-- ---------- Instalaciones ---------- -->
+    <section class="seccion seccion--fotos" aria-labelledby="titulo-local">
+      <h2 class="titulo titulo--seccion" id="titulo-local">Conocé nuestras instalaciones</h2>
 
-    <p>
-    <a href="https://maps.app.goo.gl/7CWVMSWedYG525Pc7" target="_blank" rel="noopener">
-    <img src="../Recursos/Local_y_Logo/fachada-2.png" alt="Fachada del Centro Plástico Chirri, otra vista" width="248">
-    </a>
-    </p>
+      <div class="galeria">
+        <figure class="foto">
+          <a href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <img src="../Recursos/Local_y_Logo/fachada-1.png" alt="Fachada del Centro Plástico Chirri vista desde la Avenida 1">
+          </a>
+          <figcaption class="foto__pie">Vista desde la Avenida 1</figcaption>
+        </figure>
+
+        <figure class="foto">
+          <a href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <img src="../Recursos/Local_y_Logo/fachada-2.png" alt="Esquina del local del Centro Plástico Chirri junto a la Carnicería La Sarchiseña">
+          </a>
+          <figcaption class="foto__pie">La esquina, junto a la carnicería</figcaption>
+        </figure>
+      </div>
     </section>
 
     <hr>
 
-    <section>
-    <h3>🕒 Horario</h3>
-    <table border="1" cellpadding="5">
-    <tr><td>Lunes</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Martes</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Miércoles</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Jueves</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Viernes</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Sábado</td><td>08:00 - 05:00</td></tr>
-    <tr><td>Domingo</td><td>Cerrado</td></tr>
-    </table>
+    <!-- ---------- Horario ---------- -->
+    <section class="seccion seccion--horario" aria-labelledby="titulo-horario">
+      <h2 class="titulo titulo--seccion" id="titulo-horario">Horario de atención</h2>
+
+      <table class="horario">
+        <caption class="horario__pie">Los feriados nacionales permanecemos cerrados.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Atendemos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Lunes</th>    <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Martes</th>   <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Jueves</th>   <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Viernes</th>  <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Sábado</th>   <td class="cerrado">Cerrado</td></tr>
+          <tr><th scope="row">Domingo</th>  <td class="cerrado">Cerrado</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    </main>
+  </main>
     <hr>
 
     <footer id="pie-pagina">

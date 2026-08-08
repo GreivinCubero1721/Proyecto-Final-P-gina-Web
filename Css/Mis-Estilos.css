@@ -269,7 +269,7 @@ hr{
 .derechos p{
 
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.952);
+    color: white;
 }
 
 
@@ -277,386 +277,691 @@ hr{
 /* -------------------------------------- */
 /* ************************************** */
 
-
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-/*   Apartado para darle formato a los componentes dentro de las demás Páginas  */
-                             /* Mobile - First */
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-
-
-/* ------------------------------------------------------------------------- */
-
-/* Apartado para darle formato a los componentes de la Página Sobre_Nosotros */
-                             /* Mobile - First */
-
-/* ------------------------------------------------------------------------- */
+/* ========================================================================= */
+/* ========================================================================= */
+/*                        INICIA CSS DE UBICACION                            */
+/*                             Mobile - First                                */
+/*   Todo va anidado bajo .contenido para no afectar a las otras 5 páginas   */
+/* ========================================================================= */
+/* ========================================================================= */
 
 
+/* ------------------------------------------ */
+        /* Base de la página de Ubicación */
+/* ------------------------------------------ */
 
-/* --------------------------------------------------------- */
-    /* Configuración contenedores del body de Sobre-Nosotros*/
-/* ------------------------------------------------------- */
+/* El proyecto no usa box-sizing global, así que lo activamos solo aquí
+   para que el padding y el borde no agranden las cajas de esta página */
+.contenido,
+.contenido *,
+.contenido *::before,
+.contenido *::after{
+    box-sizing: border-box;
+}
+
+.contenido{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+    line-height: 1.55;
+}
+
+.contenido img,
+.contenido iframe{
+    display: block;
+    max-width: 100%;
+}
+
+.contenido a{
+    text-decoration: none;
+}
+
+.contenido .seccion{
+    padding-top: 32px;
+}
 
 
-.container .imagenes{
+/* ------------------------------------------ */
+        /* Títulos y rótulos */
+/* ------------------------------------------ */
+
+/* El antetítulo verde pequeño que va sobre el título principal */
+.contenido .antetitulo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #117741;
+    margin-bottom: 8px;
+}
+
+.contenido .titulo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #12512F;
+}
+
+/* Se anula el display:flex y el text-shadow que el CSS general le pone a h2/h3
+   para que los títulos de esta página queden alineados a la izquierda */
+.contenido .titulo--seccion{
+    display: block;
+    text-align: left;
+    text-shadow: none;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(17, 18, 20);
+}
+
+
+/* ------------------------------------------ */
+        /* Bloque de Dirección + Mapa */
+/* ------------------------------------------ */
+
+/* Flex con wrap: en móvil cada caja ocupa la fila completa y se apilan.
+   Cuando la pantalla lo permite se acomodan las dos en una sola línea */
+.contenido .mapa-bloque{
+    margin-top: 24px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.contenido .datos{
+    flex: 1 1 100%;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 22px 20px;
+}
+
+/* Rótulos "DIRECCIÓN" y "CÓMO LLEGAR" */
+.contenido .datos__rotulo{
+    display: block;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #117741;
+    text-shadow: none;
+    margin-bottom: 4px;
+}
+
+/* Separa el párrafo que va justo debajo de cada rótulo */
+.contenido .datos__rotulo + *{
+    margin-bottom: 20px;
+}
+
+.contenido .datos__direccion{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.35;
+    color: #0c0f0e;
+}
+
+.contenido .datos__nota{
+    font-size: 0.95rem;
+    color: rgba(12, 15, 14, 0.68);
+}
+
+/* Botón de Google Maps */
+.contenido .boton{
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    /* Esta medida (vh) es view Height esto ayuda a que auque cambie las medidas de la pantalla esta se adapte automaticamente */
+    gap: 9px;
+    padding: 12px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    color: #FBF7EE;
+    background-color: #117741;
+    border: 2px solid rgb(17, 18, 20);
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 rgb(17, 18, 20);
+}
+
+.contenido .boton svg{
+    width: 19px;
+    height: 19px;
+}
+
+/* Al pasar el mouse el botón se "hunde" sobre su propia sombra */
+.contenido .boton:hover{
+    background-color: #12512F;
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 rgb(17, 18, 20);
+}
+
+/* Marco del mapa */
+.contenido .mapa{
+    flex: 1 1 100%;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
+}
+
+.contenido .mapa__marco{
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.contenido .mapa__pie{
+    padding: 11px 14px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FBF7EE;
+    background-color: #12512F;
+}
+
+
+/* ------------------------------------------ */
+        /* Galería de instalaciones */
+/* ------------------------------------------ */
+
+.contenido .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.contenido .foto{
+    flex: 1 1 100%;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
+}
+
+.contenido .foto img{
+    width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.contenido .foto:hover img{
+    transform: scale(1.04);
+}
+
+.contenido .foto__pie{
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: rgba(12, 15, 14, 0.68);
+    border-top: 3px solid rgb(17, 18, 20);
+}
+
+
+/* ------------------------------------------ */
+        /* Tabla del Horario */
+/* ------------------------------------------ */
+
+.contenido .horario{
+    width: 100%;
+    max-width: 560px;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.contenido .horario th,
+.contenido .horario td{
+    padding: 11px 16px;
+}
+
+/* Encabezado verde de la tabla */
+.contenido .horario thead th{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #FBF7EE;
+    background-color: #117741;
+}
+
+/* Redondeamos las esquinas celda por celda porque una <table> no
+   recorta con overflow como lo hace un <div> */
+.contenido .horario thead th:first-child{
+    border-top-left-radius: 13px;
+}
+
+.contenido .horario thead th:last-child{
+    border-top-right-radius: 13px;
+}
+
+.contenido .horario tbody tr:last-child th{
+    border-bottom-left-radius: 13px;
+}
+
+.contenido .horario tbody tr:last-child td{
+    border-bottom-right-radius: 13px;
+}
+
+.contenido .horario tbody th{
+    text-align: left;
+    font-weight: normal;
+    color: #0c0f0e;
+}
+
+.contenido .horario tbody td{
+    text-align: right;
+    color: #0c0f0e;
+}
+
+/* Filas alternas con el verde suave de la paleta */
+.contenido .horario tbody tr:nth-child(even) th,
+.contenido .horario tbody tr:nth-child(even) td{
+    background-color: #a6dfc044;
+}
+
+.contenido .horario tbody tr + tr th,
+.contenido .horario tbody tr + tr td{
+    border-top: 1px solid rgba(17, 18, 20, 0.12);
+}
+
+.contenido .horario .cerrado{
+    color: #B8332B;
+    font-weight: bold;
+}
+
+/* La nota de los feriados va debajo de la tabla */
+.contenido .horario__pie{
+    caption-side: bottom;
+    padding-top: 12px;
+    font-size: 0.8rem;
+    text-align: left;
+    color: rgba(12, 15, 14, 0.68);
+}
+
+
+/* ------------------------------------------ */
+        /* De aquí para arriba crece el diseño */
+/* ------------------------------------------ */
+
+/* A partir de 640px las dos fotos de la fachada caben lado a lado */
+@media screen and (min-width: 640px){
+
+    .contenido{
+        padding: 0 24px 56px;
+    }
+
+    .contenido .seccion{
+        padding-top: 44px;
+    }
+
+    .contenido .titulo{
+        font-size: 2.4rem;
+    }
+
+    .contenido .titulo--seccion{
+        font-size: 1.8rem;
+    }
+
+    .contenido .foto{
+        flex: 1 1 280px;
+    }
+
+    .contenido .mapa__marco{
+        height: 360px;
+    }
+}
+
+/* A partir de 900px la ficha de dirección y el mapa entran en una sola fila */
+@media screen and (min-width: 900px){
+
+    .contenido .seccion{
+        padding-top: 56px;
+    }
+
+    .contenido .titulo{
+        font-size: 3rem;
+    }
+
+    .contenido .titulo--seccion{
+        font-size: 2.1rem;
+    }
+
+    .contenido .mapa-bloque{
+        gap: 32px;
+    }
+
+    .contenido .datos{
+        flex: 1 1 300px;
+        max-width: 380px;
+    }
+
+    .contenido .mapa{
+        flex: 3 1 420px;
+    }
+
+    .contenido .mapa__marco{
+        height: 420px;
+    }
+}
+
+
+/* ========================================================================= */
+/* ========================================================================= */
+/*                       FINALIZA CSS DE UBICACION                           */
+/* ========================================================================= */
+/* ========================================================================= */
+
+/* ========================================================================= */
+/* ========================================================================= */
+/*                      INICIA CSS DE SOSTENIBILIDAD                         */
+/*                             Mobile - First                                */
+/*  Reutiliza .contenido, .titulo y .antetitulo del bloque de Ubicación y    */
+/*  agrega solo lo propio de esta página bajo .contenido--sostenibilidad     */
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+/* ------------------------------------------ */
+        /* Presentación: lema + ilustración */
+/* ------------------------------------------ */
+
+/* Flex con wrap: en móvil se apilan y cuando la pantalla lo permite
+   el lema y la ilustración se acomodan en una sola línea */
+.contenido--sostenibilidad .intro-bloque{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contenido--sostenibilidad .lema{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    background-color: #12512F;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 26px 22px;
+}
+
+.contenido--sostenibilidad .lema__texto{
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #FBF7EE;
+}
+
+.contenido--sostenibilidad .lema__firma{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(252, 223, 185);
+}
+
+.contenido--sostenibilidad .ilustracion{
+    flex: 1 1 100%;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
+}
+
+.contenido--sostenibilidad .ilustracion img{
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    background-color: #a6dfc044;
+}
+
+.contenido--sostenibilidad .ilustracion__pie{
+    padding: 12px 14px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #12512F;
+    border-top: 3px solid rgb(17, 18, 20);
+}
+
+
+/* ------------------------------------------ */
+        /* Párrafo destacado */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .destacado{
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-left: 12px solid #117741;   /* Barra verde a la izquierda */
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 22px 20px;
+}
+
+.contenido--sostenibilidad .destacado p{
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: #0c0f0e;
+}
+
+
+/* ------------------------------------------ */
+        /* Las tres preguntas */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .preguntas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    counter-reset: pregunta;   /* Numera las tarjetas 01, 02, 03 */
+}
+
+.contenido--sostenibilidad .pregunta{
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    padding: 22px 20px;
+}
+
+/* Se ajusta el h3 porque el CSS general lo centra con flex */
+.contenido--sostenibilidad .pregunta__titulo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: #12512F;
+    margin-bottom: 14px;
+}
+
+/* La pastilla verde con el número */
+.contenido--sostenibilidad .pregunta__titulo::before{
+    counter-increment: pregunta;
+    content: "0" counter(pregunta);
+    flex: 0 0 auto;
+    padding: 5px 11px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: #FBF7EE;
+    background-color: #117741;
+    border: 2px solid rgb(17, 18, 20);
+    border-radius: 999px;
+}
+
+.contenido--sostenibilidad .pregunta__texto{
+    line-height: 1.6;
+    color: #0c0f0e;
+}
+
+
+/* ------------------------------------------ */
+        /* Lista de materiales reciclables */
+/* ------------------------------------------ */
+
+/* Flex con wrap: una tarjeta por línea en móvil y varias por
+   línea apenas la pantalla tenga espacio suficiente */
+.contenido--sostenibilidad .materiales{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contenido--sostenibilidad .material{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 16px;
+    background-color: #a6dfc044;
+    border: 2px solid #12512F;
+    border-radius: 12px;
+}
+
+.contenido--sostenibilidad .material__tipo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.85rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #12512F;
+}
+
+.contenido--sostenibilidad .material__detalle{
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(12, 15, 14, 0.78);
+}
+
+/* Los residuos especiales llevan aviso porque no van al contenedor común */
+.contenido--sostenibilidad .material--aviso{
+    background-color: #FBF7EE;
+    border-color: #B8332B;
+}
+
+.contenido--sostenibilidad .material--aviso .material__tipo{
+    color: #B8332B;
+}
+
+
+/* ------------------------------------------ */
+        /* Video */
+/* ------------------------------------------ */
+
+.contenido--sostenibilidad .video__intro{
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgba(12, 15, 14, 0.68);
     
 }
 
-
-/* ------------------------------------------ */
-        /* Sección de Historia del Local */
-/* ------------------------------------------ */
-
-#historia p{
-    font-size: 1.2rem;
-    margin: 10px auto;
-    padding: 5px;
-    border: 2px solid Black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px rgb(17, 18, 20);
+.contenido--sostenibilidad .video{
+    max-width: 760px;
+    margin: auto ;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(17, 18, 20);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgb(17, 18, 20);
+    overflow: hidden;
 }
 
-#historia .imagenes{
-   margin: 20px auto;
-}
-
-#historia img{
-    width: 250px;
-    height: auto;   
-    margin: 10px;            
-    padding: 1px;  
-    border: 2px solid black;  
-    box-shadow: 4px 5px 4px rgba(2, 20, 2, 0.801);
-}
-
-
-/* ------------------------------------------ */
-     /* Sección sobre la Misión del Local */
-/* ------------------------------------------ */
-
-#mision p{
-    font-size: 1.2rem;
-    margin: 10px auto;
-    padding: 5px;
-    border: 2px solid Black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px rgb(17, 18, 20);
-}
-
-#mision img{
-    width: 320px;
-    height: auto;   
-    margin: 10px;            
-    padding: 1px;  
-    border: 2px solid black;  
-    box-shadow: 4px 5px 4px rgba(2, 20, 2, 0.801);
-}
-
-
-/* ------------------------------------------ */
-    /* Sección sobre la Visión del Local */
-/* ------------------------------------------ */
-
-#vision p{
-    font-size: 1.2rem;
-    margin: 10px auto;
-    padding: 5px;
-    border: 2px solid Black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px rgb(17, 18, 20);
-}
-
-#vision img{
-    width: 360px;
-    height: auto;   
-    margin: 10px;            
-    padding: 1px;  
-    border: 2px solid black;  
-    box-shadow: 4px 5px 4px rgba(2, 20, 2, 0.801);
-
-}
-
-
-/* ------------------------------------------ */
-        /* Sección de Valores del Local */
-/* ------------------------------------------ */
-
-#valores .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#valores p{
-    font-size: 1.2rem;
-    margin: 10px auto;
-    padding: 5px;
-    border: 2px solid Black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px rgb(17, 18, 20);
-}
-
-#valores  h4{
-color: #0a3820;
-font-size: 1.3rem;
-}
-
-
-
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-
-/*   Apartado para darle formato a los componentes de la Página Contacto     */
-                             /* Mobile - First */
-
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-
-/* ------------------------------------------ */
-    /* Sección sobre la info del Contacto */
-/* ------------------------------------------ */
-
-
-#hero-conta {
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.container-hero{
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #0a3820;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 8px 4px rgba(118, 134, 111, 0.932);
-}
-
-.conta-whatsapp {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   margin-top: 20px;
-}
-
-.conta-whatsapp p{
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: rgb(252, 223, 185);
-    margin: 0 15px;
-    text-shadow: 2px 2px 10px rgba(252, 223, 185, 0.486);
-}
-
-.conta-whatsapp button{
-    width: 80px;
-    height: 50px;
-    background-color: #0b6334;
-    border: 2px solid rgba(1, 15, 4, 0.822);
-    border-radius: 12px;
-    box-shadow: 5px 2px 2px rgb(11, 27, 4);
-    cursor: pointer;
-}
-
-.conta-whatsapp button:hover{
-    background-color: lightgreen;
-    transform: translateY(3px);
-}
-
-.conta-telefono{
-    margin: 70px 0 0;
-   display: flex;
-   flex-direction: row;
-   align-items:center;
-}
-
-.conta-telefono p{
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: rgb(252, 223, 185);
-    margin: 0 15px;
-    text-shadow: 2px 2px 10px rgba(252, 223, 185, 0.486);
-}
-
-
-.conta-telefono button{
-    width: 80px;
-    height: 50px;
-    background-color: #0b6334;
-    border: 2px solid rgba(1, 15, 4, 0.822);
-    border-radius: 12px;
-    box-shadow: 2px 2px 2px rgb(11, 27, 4);
-    cursor: pointer;
-}
-
-
-.conta-telefono button:hover{
-    background-color: lightblue;
-    transform: translateY(3px);
-}
-
-
-.mascota-info{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items:center;
-}
-
-.mascota-info p{
-    display: flex;
-    align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.6rem;
-    color: rgb(252, 223, 185);
-    margin: 0 5px;
-    text-shadow: 2px 2px 10px rgba(252, 223, 185, 0.308);
-}
-
-.mascota-info img{
-    width: 150px;
+/* El video se adapta al ancho manteniendo la proporción 16:9 */
+.contenido--sostenibilidad .video__marco{
+    width: 100%;
     height: auto;
-    border-radius: 35px;
-    cursor: pointer;
-    box-shadow: 4px 4px 1px rgb(1, 15, 4);
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+    
 }
 
-.mascota-info img:hover{
-    transform:rotate(8deg);
+.contenido--sostenibilidad .video__pie{
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: rgba(12, 15, 14, 0.68);
+    border-top: 3px solid rgb(17, 18, 20);
 }
 
 
 /* ------------------------------------------ */
-     /* Sección de Preguntas Frecuentes */
+        /* De aquí para arriba crece el diseño */
 /* ------------------------------------------ */
 
-#preguntas-frecuentes{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10px;
-}
+/* A partir de 640px los materiales caben de dos en dos */
+@media screen and (min-width: 640px){
 
-.container-preguntas{
-    font-size: 1.2rem;
-    margin: 10px auto;
-    padding: 5px;
-    border: 2px solid Black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 2px rgb(17, 18, 20);
-    list-style: none;
-}
-
-.container-preguntas li{
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-
-/* ------------------------------ */
-/* ****************************** */
-/* ------------------------------ */
-
-
-
-
-
-
-
-
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-
-/*   Apartado para darle formato a los componentes en la verión de escritorio  */
-                             /* Desktop */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-
-
-@media(min-width:1200px)
-{
-
-/* --------------------------------------------------- */
-        /* Versión Desktop Header y menú de navegación */
-/* --------------------------------------------------- */
-
-
-
-   #navegacion .container{
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 160px;
-   }
-
-   .imagen-header{
-    margin-left: -150px;
-   }
-
-   .container-nav{
-    margin-right: -280px ;
-   }
-
-
-/* ---------------------------------------- */
-        /* Versión Desktop al pie de página */
-/* ---------------------------------------- */
-   #pie-pagina .container{
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 60px;
-   }
-
-   #pie-pagina .lista{
-    display: flex;
-    flex-direction: row;
-    gap: 120px;
-   }
-
-    #pie-pagina .lista p {
-        /* Evita que el texto rompa líneas (En #pie-pagina p o #pie-pagina .lista p): */
-        /* Esto obliga al texto a mantenerse estrictamente en una sola línea continua, sin importar los espacios que tenga. */
-        white-space: nowrap;
+    .contenido--sostenibilidad .lema__texto{
+        font-size: 1.45rem;
     }
 
-/* ************************************************************* */
- /* --------------------------------------------------------- --*/
-  /*        Versión Desktop de las demás Páginas del Proyecto  */
-   /* --------------------------------------------------------*/
-    /* ***************************************************** */
+    .contenido--sostenibilidad .pregunta{
+        padding: 26px 24px;
+    }
 
+    .contenido--sostenibilidad .pregunta__titulo{
+        font-size: 1.35rem;
+    }
 
-/* ---------------------------------------- */
-        /* Versión Desktop Sobre Nosotros   */
-/* ---------------------------------------- */
-
-
-
-
-
-/* ---------------------------------------- */
-        /* Versión Desktop de Contacto      */
-/* ---------------------------------------- */
-
-
-
-
-
-
-
+    .contenido--sostenibilidad .material{
+        flex: 1 1 280px;
+    }
 }
+
+/* A partir de 900px el lema y la ilustración entran en una sola fila */
+@media screen and (min-width: 900px){
+
+    .contenido--sostenibilidad .intro-bloque{
+        gap: 32px;
+    }
+
+    .contenido--sostenibilidad .lema{
+        flex: 1 1 320px;
+    }
+
+    .contenido--sostenibilidad .ilustracion{
+        flex: 1 1 380px;
+    }
+
+    .contenido--sostenibilidad .preguntas{
+        gap: 24px;
+    }
+
+    .contenido--sostenibilidad .destacado{
+        padding: 28px 30px;
+    }
+
+    .contenido--sostenibilidad .destacado p{
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ========================================================================= */
+/* ========================================================================= */
+/*                     FINALIZA CSS DE SOSTENIBILIDAD                        */
+/* ========================================================================= */
+/* ========================================================================= */
+
 

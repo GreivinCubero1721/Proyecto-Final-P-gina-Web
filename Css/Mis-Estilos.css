@@ -278,6 +278,315 @@ hr{
 /* ************************************** */
 
 /* ========================================================================= */
+/* INICIA CSS DE INDEX (PÁGINA PRINCIPAL) */
+/* ========================================================================= */
+ 
+.contenido-principal {
+  max-width: 400px;
+  margin: 0 auto;
+}
+ 
+/* Sección hero con tonos invertidos */
+.inicio-hero {
+  text-align: left;
+  margin-bottom: 20px;
+  background-color: #2D6A4F;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+ 
+.inicio-hero img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+ 
+.inicio-hero h1 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+ 
+.inicio-hero p {
+  font-size: 14px;
+  color: #e8f5e9;
+  margin-bottom: 15px;
+}
+ 
+.btn-conoce {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #12512F;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+ 
+.btn-conoce:hover {
+  background-color: #f0fdf4;
+  color: #1aa059;
+}
+ 
+/* Accesos rápidos de inicio */
+.lista-accesos {
+  list-style: none;
+}
+ 
+.lista-accesos li {
+  border-bottom: 1px solid #e5e7eb;
+}
+ 
+.lista-accesos a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5px;
+  text-decoration: none;
+  color: #12512F;
+  font-size: 15px;
+  font-weight: bold;
+  gap: 12px;
+}
+ 
+.acceso-icono {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+ 
+.lista-accesos .acceso-desc {
+  display: none;
+}
+ 
+.lista-accesos span.flecha {
+  color: #9ca3af;
+  font-weight: bold;
+}
+ 
+/* Media Query de Index para pantallas grandes */
+@media (min-width: 768px) {
+  .contenido-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+ 
+  .inicio-hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #2D6A4F;
+    border: 1px solid #1b4332;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+  }
+ 
+  .inicio-hero img {
+    width: 45%;
+    margin-bottom: 0;
+  }
+ 
+  .inicio-hero-texto {
+    width: 55%;
+  }
+ 
+  .inicio-hero h1 {
+    font-size: 30px;
+    color: #ffffff;
+  }
+ 
+  .lista-accesos {
+    display: flex;
+    gap: 15px;
+  }
+ 
+  .lista-accesos li {
+    flex: 1;
+    border: 1px solid #12512F;
+    border-radius: 8px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  }
+ 
+  .lista-accesos a {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+ 
+  .lista-accesos .acceso-desc {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 6px;
+  }
+ 
+  .lista-accesos span.flecha {
+    display: none;
+  }
+}
+ 
+/* ========================================================================= */
+/* FINALIZA CSS DE INDEX */
+/* ========================================================================= */
+ 
+ 
+/* ========================================================================= */
+/* INICIA CSS DE CATÁLOGO */
+/* ========================================================================= */
+ 
+.titulo-catalogo {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #12512F;
+}
+ 
+.barra-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+ 
+select.select-categoria {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #12512F;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+}
+ 
+.buscador-contenedor {
+  position: relative;
+  width: 100%;
+}
+ 
+.buscador-contenedor input {
+  width: 100%;
+  padding: 9px 9px 9px 32px;
+  border: 1px solid #12512F;
+  border-radius: 4px;
+  font-size: 13px;
+}
+ 
+.buscador-contenedor .icono-lupa {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+ 
+.lista-productos {
+  list-style: none;
+}
+ 
+.producto-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+ 
+.producto-item img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+ 
+.producto-info h3 {
+  font-size: 15px;
+  color: #12512F;
+  text-align: left;
+  margin-bottom: 2px;
+}
+ 
+.producto-info p {
+  font-size: 12px;
+  color: #6b7280;
+}
+ 
+/* Media Query de Catálogo para pantallas grandes */
+@media (min-width: 768px) {
+  .barra-filtros {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  select.select-categoria {
+    width: 200px;
+  }
+ 
+  .buscador-contenedor {
+    width: 250px;
+  }
+ 
+  .lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+ 
+  .producto-item {
+    width: calc(25% - 15px);
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #12512F;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  }
+ 
+  .producto-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+ 
+  .producto-info {
+    width: 100%;
+    text-align: center;
+    background-color: #a6dfc044;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #12512F;
+  }
+ 
+  .producto-info h3 {
+    font-size: 14px;
+    color: #12512F;
+    text-align: center;
+  }
+ 
+  .producto-info p {
+    display: none;
+  }
+}
+ 
+/* ========================================================================= */
+/* FINALIZA CSS DE CATÁLOGO */
+/* ========================================================================= */
+ 
+
+/* ========================================================================= */
 /* ========================================================================= */
 /*                        INICIA CSS DE UBICACION                            */
 /*                             Mobile - First                                */

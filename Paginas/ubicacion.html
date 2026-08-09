@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Para lograr que la mascota del local se vea en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="../Recursos/Local_y_Logo/Mascota.png">
+    <title>Localización</title>
+    <link rel="stylesheet" href="../Css/Mis-Estilos.css">
+</head>
+<body>
+    <header id="navegacion">
+        <div class="container">
+            <div class="imagen-header">
+                <img src="../Recursos/Local_y_Logo/Mascota.png" alt="logo">
+                    <p>Centro Plástico Chirri</p>
+            </div>
+            <nav class="container-nav">
+                <a href="../Index.html" class="nav-item">
+                    <img src="../Recursos/Iconos/home.png" alt="" class="nav-icon">
+                    <span>Inicio</span>
+                </a>
+                <a href="Catálogo.html" class="nav-item">
+                    <img src="../Recursos/Iconos/Catálogo.png" alt="" class="nav-icon">
+                    <span>Catálogo</span>
+                </a>
+                <a href="Sobre_Nosotros.html" class="nav-item">
+                    <img src="../Recursos/Iconos/Sobre_Nosotros.png" alt="" class="nav-icon">
+                    <span>Sobre Nosotros</span>
+                </a>
+                <a href="ubicacion.html" class="nav-item active">
+                    <img src="../Recursos/Iconos/location.png" alt="" class="nav-icon">
+                    <span>Localización</span>
+                </a>
+                <a href="Contacto.html" class="nav-item">
+                    <img src="../Recursos/Iconos/Contacto.png" alt="" class="nav-icon">
+                    <span>Contacto</span>
+                </a>
+                <a href="sostenibilidad.html" class="nav-item">
+                    <img src="../Recursos/Iconos/Sostenibilidad.png" alt="" class="nav-icon">
+                    <span>Sostenibilidad</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <main class="contenido">
+
+    <!-- ---------- Dirección + mapa ---------- -->
+    <section class="seccion seccion--mapa" aria-labelledby="titulo-donde">
+      <p class="antetitulo">Sarchí Norte, Valverde Vega &middot; Alajuela</p>
+      <h1 class="titulo" id="titulo-donde">¿Dónde puede encontrarnos?</h1>
+
+      <div class="mapa-bloque">
+
+        <div class="datos">
+          <h2 class="datos__rotulo">Dirección</h2>
+          <p class="datos__direccion">100 mts norte del templo católico de Sarchí.</p>
+
+          <h2 class="datos__rotulo">Cómo llegar</h2>
+          <p class="datos__nota">
+            Estamos en la esquina, en el edificio de madera color naranja, al lado
+            de la Carnicería La Sarchiseña y frente a Boutique Americana.
+          </p>
+
+          <a class="boton" href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21.4s7-6.3 7-11.1a7 7 0 1 0-14 0c0 4.8 7 11.1 7 11.1z"/>
+              <circle cx="12" cy="10.3" r="2.6"/>
+            </svg>
+            Abrir en Google Maps
+          </a>
+        </div>
+
+        <figure class="mapa">
+          <iframe
+            class="mapa__marco"
+            src="https://www.google.com/maps?q=10.0906558,-84.3463215&amp;hl=es&amp;z=18&amp;output=embed"
+            title="Mapa con la ubicación del Centro Plástico Chirri en Sarchí"
+            width="600" height="420"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <figcaption class="mapa__pie">Centro Plástico Chirri &middot; Sarchí, Alajuela</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ---------- Instalaciones ---------- -->
+    <section class="seccion seccion--fotos" aria-labelledby="titulo-local">
+      <h2 class="titulo titulo--seccion" id="titulo-local">Conocé nuestras instalaciones</h2>
+
+      <div class="galeria">
+        <figure class="foto">
+          <a href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <img src="../Recursos/Local_y_Logo/fachada-1.png" alt="Fachada del Centro Plástico Chirri vista desde la Avenida 1">
+          </a>
+          <figcaption class="foto__pie">Vista desde la Avenida 1</figcaption>
+        </figure>
+
+        <figure class="foto">
+          <a href="https://maps.app.goo.gl/gc79tpobSTn2KfhbA" target="_blank" rel="noopener">
+            <img src="../Recursos/Local_y_Logo/fachada-2.png" alt="Esquina del local del Centro Plástico Chirri junto a la Carnicería La Sarchiseña">
+          </a>
+          <figcaption class="foto__pie">La esquina, junto a la carnicería</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ---------- Horario ---------- -->
+    <section class="seccion seccion--horario" aria-labelledby="titulo-horario">
+      <h2 class="titulo titulo--seccion" id="titulo-horario">Horario de atención</h2>
+
+      <table class="horario">
+        <caption class="horario__pie">Los feriados nacionales permanecemos cerrados.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Atendemos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Lunes</th>    <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Martes</th>   <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Jueves</th>   <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Viernes</th>  <td>08:00 &ndash; 17:00</td></tr>
+          <tr><th scope="row">Sábado</th>   <td>08:00 &ndash; 15:00</td></tr>
+          <tr><th scope="row">Domingo</th>  <td class="cerrado">Cerrado</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+    <hr>
+
+    <footer id="pie-pagina">
+        <div class="container">
+            <div class="logo">
+                <img src="../Recursos/Local_y_Logo/Logo.png" 
+                alt="Logo del Local">
+            </div>
+            <ul class="lista">
+                <li>
+                    <div class="whatsapp">
+                        <form action="https://wa.me/50687559420">
+                            <button>
+                                <img src="../Recursos/Iconos/logoWhatsApp.png" 
+                                alt="WhatsApp"
+                                width="20">
+                            </button>
+                        </form>
+                    <p>8755 9420</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="facebook">
+                        <form action="https://www.facebook.com/share/194swaBTwd/">
+                            <button>
+                                <img src="../Recursos/Iconos/iconoFacebook.png" 
+                                alt="Facebook"
+                                width="20">
+                            </button>
+                        </form>
+                    <p>Centro Plástico Chirri</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="telefono">
+                        <button>
+                            <img src="../Recursos/Iconos/iconoTelefono.png" 
+                            alt="telefono"
+                            width="20">
+                        </button>
+                        <p>2454 2252</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="derechos">
+                <p>&copy; 1992 CentroPlásticoChirri. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

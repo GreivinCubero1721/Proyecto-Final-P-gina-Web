@@ -500,7 +500,7 @@ font-size: 1.3rem;
     background-color: #0b6334;
     border: 2px solid rgba(1, 15, 4, 0.822);
     border-radius: 12px;
-    box-shadow: 2px 2px 2px rgb(11, 27, 4);
+    box-shadow: 5px 2px 2px rgb(11, 27, 4);
     cursor: pointer;
 }
 
@@ -644,19 +644,114 @@ font-size: 1.3rem;
         /* Versión Desktop Sobre Nosotros   */
 /* ---------------------------------------- */
 
+#valores h2{
+    margin: 15px 0;
+}
 
+.container .imagenes{
+    flex-direction: row;
+    gap: 100px;
 
+}
+
+#valores .container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-valores{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    /* Hace que todas midan lo mismo */
+    flex:1;     
+}
 
 
 /* ---------------------------------------- */
         /* Versión Desktop de Contacto      */
 /* ---------------------------------------- */
+/* Contenedor principal estilizado como tarjeta flotante central */
+    
+
+    /* Distribución general: primero las 2 tarjetas arriba y la mascota abajo */
+    .container-hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(../Recursos/Local_y_Logo/Local-actual.png);
+    }
+
+    /* Estilo de las 2 Tarjetas (WhatsApp y Teléfono) */
+    .conta-whatsapp,
+    .conta-telefono{
+        padding: 20px;
+        margin: 30px 30px;
+        background-color: #bec5bb88;
+        display: flex;
+        flex-direction: column; /* Pone el botón/icono ARRIBA y el texto ABAJO */
+        align-items: center;
+        text-align: center;
+        width: 250px; /* Ancho fijo para que ambas tarjetas midan igual */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid grey;
+        border-radius: 20px;
+        box-shadow: 2px 2px 8px black;
+    }
 
 
+    .conta-whatsapp:hover, 
+    .conta-telefono:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Corrección de texto en las tarjetas: mantiene el número en una sola línea */
+    .conta-whatsapp p, 
+    .conta-telefono p {
+        color: #0a3820;
+        font-size: 1.6rem;
+        margin-top: 10px;
+        white-space: nowrap; 
+    }
+
+    /* Bloque de la Mascota: Se fuerza a bajar al centro ocupando el 100% del ancho */
+    .mascota-info {
+        width: 100%;
+        display: flex;
+        flex-direction: row; /* Mascota a la izquierda, texto a la derecha */
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .mascota-info p {
+        font-size: 1.1rem;
+        text-align: left;
+        white-space: nowrap; /* Mantiene "Centro Plástico Chirri" limpio */
+    }
+
+    .mascota-info br {
+        display: none; /* Elimina los saltos de línea para que el texto sea horizontal */
+    }
 
 
+  
 
 
-
+/* ************************************************ */
+/* ------------------------------------------------ */
+/* ************************************************ */
 }
 

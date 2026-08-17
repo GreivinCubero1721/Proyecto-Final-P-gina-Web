@@ -728,6 +728,65 @@ font-size: 1.3rem;
 }
 
 
+
+/* ------------------------------------------ */
+/* Ajustes para el Acordeón en Historia */
+/* ------------------------------------------ */
+
+/* Elimina la flecha nativa del navegador */
+#historia details summary {
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#historia details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo del botón 'Ver más' acorde a la paleta institucional */
+#historia details .texto-btn {
+    background-color: #0a3820;
+    color: #FBF7EE;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#historia details .texto-btn:hover {
+    background-color: #125230;
+    transform: translateY(-2px);
+}
+
+/* Cambia dinámicamente la etiqueta al abrir */
+#historia details[open] .texto-btn::after {
+    content: " (Ver menos)";
+}
+
+/* Animación de revelado progresivo para los párrafos ocultos */
+#historia details .contenido-oculto {
+    animation: desplegarTexto 0.4s ease-in-out forwards;
+}
+
+@keyframes desplegarTexto {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 /* ========================================================================= */
 /* Finalización Pagina Sobre Nosotros */
 /* ========================================================================= */

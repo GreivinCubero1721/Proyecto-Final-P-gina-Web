@@ -914,6 +914,10 @@ font-size: 1.3rem;
     transform:rotate(8deg);
 }
 
+.container-preguntas ol{
+    list-style: none;
+}
+
 
 /* ------------------------------------------ */
      /* Sección de Preguntas Frecuentes */
